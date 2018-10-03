@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Isaac Harper
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -55,9 +55,16 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+    expected = [3, 4, 5]
+    actual = practice_problem2a([2, 3, 4], 1)
+    print('Expected:', expected)
+    print('  Actual:', actual)
 
 
 def practice_problem2a(sequence, delta):
+    for k in range(len(sequence)):
+        
+
     """
     What comes in:
       -- A sequence of integers, e.g. ([2, 10, 5, -20, 8])
