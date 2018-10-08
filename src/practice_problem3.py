@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 3.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Isaac Harper.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -64,7 +64,7 @@ def is_prime(n):
     return True
     # ------------------------------------------------------------------
     # Students:
-    #   Do NOT touch the above  is_prime  function - it has no TODO.
+    #   Do NOT touch the above  is_prime  function - it has no Done.
     #   Do NOT copy code from this function.
     #
     # Instead, ** CALL ** this function as needed in the problems below.
@@ -137,6 +137,12 @@ def run_test_practice_problem3a():
 
 
 def practice_problem3a(circles):
+    total = 1
+    for k in range(len(circles)):
+        circle = circles[k]
+        point_x = circle.center.x
+        total = total * point_x
+    return total
     """
     What comes in:  A sequence of rg.Circles.
     What goes out:  Returns the product of the x-coordinates
@@ -156,7 +162,7 @@ def practice_problem3a(circles):
       :type sequence: [rg.Circle]
     """
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -225,6 +231,11 @@ def run_test_practice_problem3b():
 
 
 def practice_problem3b(sequence):
+    for k in range(sequence):
+        if [k] == [len(sequence - 1)]:
+            return True
+        else:
+            return False
     """
     What comes in: A non-empty sequence.
     What goes out: Returns True if the last item of the sequence
@@ -507,6 +518,7 @@ def run_test_practice_problem3e():
 
 
 def practice_problem3e(sequence):
+
     """
     What comes in:
       A sequence of numbers.

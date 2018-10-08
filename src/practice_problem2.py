@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -56,14 +56,35 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
     expected = [3, 4, 5]
-    actual = practice_problem2a([2, 3, 4], 1)
+    sequence = [2, 3, 4]
+    actual = practice_problem2a(sequence, 1)
+    print('Expected:', expected)
+    print('  Actual:', actual)
+
+    expected = [7, 8, 9]
+    sequence = [3, 4, 5]
+    actual = practice_problem2a(sequence, 1)
+    print('Expected:', expected)
+    print('  Actual:', actual)
+
+    expected = [12, 25, 17]
+    sequence = [6, 19, 11]
+    actual = practice_problem2a(sequence, 6)
+    print('Expected:', expected)
+    print('  Actual:', actual)
+
+    expected = [99, 150, 46, 77]
+    sequence = [94, 145, 41, 72]
+    actual = practice_problem2a(sequence, 5)
     print('Expected:', expected)
     print('  Actual:', actual)
 
 
 def practice_problem2a(sequence, delta):
+    new_sequence = []
     for k in range(len(sequence)):
-        
+        new_sequence = new_sequence + [sequence[k] + delta]
+    return new_sequence
 
     """
     What comes in:
@@ -158,6 +179,11 @@ def run_test_practice_problem2b():
 
 
 def practice_problem2b(sequence):
+    new_sequence = ''
+    for k in range(sequence):
+        new_sequence = new_sequence + str(k)
+    return new_sequence
+
     """
     What comes in:
       -- A sequence of strings, e.g. ('hello', 'Bye', 'ok joe')
