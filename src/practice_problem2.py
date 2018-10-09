@@ -30,7 +30,7 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem2a()
+   # run_test_practice_problem2a()
     run_test_practice_problem2b()
 
 
@@ -104,7 +104,7 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -179,10 +179,12 @@ def run_test_practice_problem2b():
 
 
 def practice_problem2b(sequence):
-    new_sequence = ''
-    for k in range(sequence):
-        new_sequence = new_sequence + str(k)
-    return new_sequence
+    new_list = ''
+    for k in range(len(sequence)):
+        if len(sequence[k]) > 0:
+            word = sequence[k]
+            new_list = new_list + word[0]
+    return new_list
 
     """
     What comes in:
@@ -203,7 +205,7 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)

@@ -231,8 +231,7 @@ def run_test_practice_problem3b():
 
 
 def practice_problem3b(sequence):
-    for k in range(sequence):
-        if [k] == [len(sequence - 1)]:
+    for k in range(len(sequence)):
             return True
         else:
             return False
