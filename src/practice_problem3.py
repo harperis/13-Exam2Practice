@@ -34,8 +34,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     run_test_practice_problem3a()
     run_test_practice_problem3b()
-    #run_test_practice_problem3c()
-    #run_test_practice_problem3d()
+    run_test_practice_problem3c()
+    run_test_practice_problem3d()
     run_test_practice_problem3e()
 
 
@@ -231,8 +231,9 @@ def run_test_practice_problem3b():
 
 
 def practice_problem3b(sequence):
+    last_number = len(sequence) - 1
     for k in range(len(sequence)):
-        if sequence[k] == sequence([len(sequence) - 1]):
+        if sequence[last_number] == sequence[k]:
             return True
         else:
             return False
@@ -426,10 +427,13 @@ def run_test_practice_problem3d():
 
 
 def practice_problem3d(sequence):
-   # for k in range(len(sequence)):
-       # if sequence[k] == 0:
-            #first_index =
-
+    leftmost = 0
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            leftmost = k
+        else:
+            leftmost = -1
+    return leftmost
 
     """
     What comes in: A sequence of integers.
@@ -482,6 +486,7 @@ def practice_problem3d(sequence):
     #
     #          This solution should *** HAVE NO LOOP (no FOR). ***
     ####################################################################
+    for k in range(len(sequence)):
 
 
 def run_test_practice_problem3e():

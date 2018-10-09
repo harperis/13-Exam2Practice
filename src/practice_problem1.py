@@ -40,7 +40,7 @@ def main():
     ####################################################################
 
     run_test_init()
-#    run_test_append_string()
+    run_test_append_string()
     run_test_double()
 #     run_test_shrink()
 #     run_test_double_then_shrink()
@@ -109,6 +109,18 @@ class Box(object):
         # --------------------------------------------------------------
 
     def append_string(self, additional_contents):
+        space = self.volume - len(self.contents)
+        number_of_characters_to_append = min(space,
+                                             len(additional_contents))
+        stuff_to_add = ''
+        for k in range(number_of_characters_to_append):
+            stuff_to_add = stuff_to_add + additional_contents[k]
+        self.contents = self.contents + stuff_to_add
+        stuff_to_return = ''
+        for k in range(number_of_characters_to_append,
+                       len(additional_contents)):
+            stuff_to_return = stuff_to_return + additional_contents[k]
+        return stuff_to_return
         """
         What comes in:
           -- self
@@ -140,7 +152,7 @@ class Box(object):
           :type additional_contents: str
         """
         # --------------------------------------------------------------
-        # TODO: 3. Implement and test this function.
+        # Done: 3. Implement and test this function.
         #     See the testing code (below) for more examples.
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -163,10 +175,12 @@ class Box(object):
         # --------------------------------------------------------------
 
     def double(self):
-        double_self = ''
-        for k in range(len(self.contents[self.volume])):
-            double_self = self.contents[k]
-        return double_self
+        new_volume = self.volume * 2
+        new_contents = self.contents + self.contents
+        if new_volume > len(self.contents):
+            self.volume = new_volume
+        return new_contents
+
         """
         What comes in:
           -- self
