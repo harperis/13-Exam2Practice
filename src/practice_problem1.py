@@ -39,9 +39,9 @@ def main():
     # UN-comment tests as you work the problems.
     ####################################################################
 
-#     run_test_init()
-#     run_test_append_string()
-#     run_test_double()
+    run_test_init()
+#    run_test_append_string()
+    run_test_double()
 #     run_test_shrink()
 #     run_test_double_then_shrink()
 #     run_test_reset()
@@ -63,6 +63,11 @@ class Box(object):
     """
 
     def __init__(self, contents, volume):
+        if len(contents) > volume:
+            self.contents = ''
+        else:
+            self.contents = contents
+        self.volume = volume
         """
         What comes in:
           -- self
@@ -94,7 +99,7 @@ class Box(object):
           :type volume: int
         """
         # --------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # Done: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -158,6 +163,10 @@ class Box(object):
         # --------------------------------------------------------------
 
     def double(self):
+        double_self = ''
+        for k in range(len(self.contents[self.volume])):
+            double_self = self.contents[k]
+        return double_self
         """
         What comes in:
           -- self

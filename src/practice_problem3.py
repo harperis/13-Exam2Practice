@@ -34,8 +34,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     run_test_practice_problem3a()
     run_test_practice_problem3b()
-    run_test_practice_problem3c()
-    run_test_practice_problem3d()
+    #run_test_practice_problem3c()
+    #run_test_practice_problem3d()
     run_test_practice_problem3e()
 
 
@@ -232,9 +232,11 @@ def run_test_practice_problem3b():
 
 def practice_problem3b(sequence):
     for k in range(len(sequence)):
+        if sequence[k] == sequence([len(sequence) - 1]):
             return True
         else:
             return False
+
     """
     What comes in: A non-empty sequence.
     What goes out: Returns True if the last item of the sequence
@@ -337,6 +339,11 @@ def run_test_practice_problem3c():
 
 
 def practice_problem3c(sequence):
+    new_list = []
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            new_list = new_list + [k]
+    return new_list
     """
     What comes in: A non-empty sequence of integers.
     What goes out: Returns a list of integers,
@@ -364,7 +371,7 @@ def practice_problem3c(sequence):
       :type: sequence: list    or tuple or string
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -419,6 +426,11 @@ def run_test_practice_problem3d():
 
 
 def practice_problem3d(sequence):
+   # for k in range(len(sequence)):
+       # if sequence[k] == 0:
+            #first_index =
+
+
     """
     What comes in: A sequence of integers.
     What goes out: Returns the first (leftmost) place (index)
@@ -517,6 +529,10 @@ def run_test_practice_problem3e():
 
 
 def practice_problem3e(sequence):
+    total = 0
+    for k in range(0, len(sequence), 2):
+        total = total + sequence[k]
+    return total
 
     """
     What comes in:
@@ -533,7 +549,7 @@ def practice_problem3e(sequence):
       :type sequence: list(float)    or tuple(float)
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # Done: 7. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
